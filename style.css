@@ -86,11 +86,33 @@ html {
 
 .menu__list {
     display: flex;
-    gap: 20px;
+    gap: 40px;
     align-items: center;
 }
 
+.menu__item {
+    position: relative;
+}
+
 .menu__link {
+    padding: 5px 10px;
+}
+
+.menu__sublist {
+    position: absolute;
+    padding-top: 10px;
+    top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transform: scale(0);
+    transition: all .3s;
+    font-size: 14px;
+}
+
+
+
+.menu__item-title {
     display: flex;
     min-height: 44px;
     align-items: center;
@@ -98,7 +120,11 @@ html {
     transition: all .3s;
 }
 
-.menu__link::after {
+.menu__item:hover .menu__sublist {
+    transform: scale(1);
+}
+
+.menu__item-title::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -110,11 +136,11 @@ html {
     transition: all .3s;
 }
 
-.menu__link:hover::after {
+.menu__item-title:hover::after {
     transform: scale(1);
 }
 
-.menu__link:hover {
+.menu__item-title:hover, .menu__sublink:hover {
     color: yellow;
 }
 
@@ -418,6 +444,10 @@ html {
         height: 90vh;
         background-color: black;
         transition: all .3s;
+    }
+
+    .menu__sublist {
+        display: none;
     }
 
     .header.active::after {
