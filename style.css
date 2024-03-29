@@ -153,7 +153,7 @@ html {
     position: relative;
     margin-top: -100px;
     min-height: 100vh;
-    background-image: url('/images/hero-bg.jpg');
+    background-image: url('./images/hero-bg.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -276,7 +276,7 @@ html {
 .footer {
     position: relative;
     color: #ffff;
-    background-image: url('/images/footer-bg.jpg');
+    background-image: url('./images/footer-bg.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
