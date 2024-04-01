@@ -2,6 +2,11 @@ html {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.sr-only {
+    overflow: hidden;
+    padding: 0;
+}
+
 .lock {
     overflow: hidden;
 }
